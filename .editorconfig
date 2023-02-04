@@ -1,0 +1,8 @@
+[*.{kt, kts}]
+indent_size = 4
+insert_final_newline = false
+max_line_length = off
+ktlint_standard_no-wildcard-imports = disabled
+ktlint_standard_no-wildcard-imports = no-blank-line-before-rbrace
+ktlint_standard_no-wildcard-imports = no-unused-imports
+ktlint_standard_no-wildcard-imports = filename
