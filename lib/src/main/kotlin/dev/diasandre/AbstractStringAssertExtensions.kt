@@ -1,9 +1,6 @@
 package dev.diasandre
 
 import org.assertj.core.api.AbstractStringAssert
-import org.assertj.core.api.Assertions
-
-fun assertThat(block: () -> String): AbstractStringAssert<*> = Assertions.assertThat(block())
 
 infix fun AbstractStringAssert<*>.isEqualTo(expected: String): AbstractStringAssert<*> = isEqualTo(expected)
 
