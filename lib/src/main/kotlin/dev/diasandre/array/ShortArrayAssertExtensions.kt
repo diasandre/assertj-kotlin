@@ -32,17 +32,11 @@ infix fun ShortArrayAssert.containsSequence(values: Array<Short>): ShortArrayAss
 infix fun ShortArrayAssert.containsSubsequence(values: Array<Short>): ShortArrayAssert =
     containsSubsequence(values)
 
-infix fun ShortArrayAssert.contains(pair: Pair<Short, Int>): ShortArrayAssert =
-    contains(pair.first, Index.atIndex(pair.second))
-
 infix fun ShortArrayAssert.contains(pair: Pair<Short, Index>): ShortArrayAssert =
     contains(pair.first, pair.second)
 
 infix fun ShortArrayAssert.doesNotContain(values: Array<Short>): ShortArrayAssert =
     doesNotContain(values)
-
-infix fun ShortArrayAssert.doesNotContain(pair: Pair<Short, Int>): ShortArrayAssert =
-    doesNotContain(pair.first, Index.atIndex(pair.second))
 
 infix fun ShortArrayAssert.doesNotContain(pair: Pair<Short, Index>): ShortArrayAssert =
     doesNotContain(pair.first, pair.second)

@@ -11,10 +11,6 @@ infix fun Double2DArrayAssert.hasDimensions(value: Pair<Int, Int>): Double2DArra
 
 infix fun Double2DArrayAssert.hasNumberOfRows(expected: Int): Double2DArrayAssert = hasNumberOfRows(expected)
 
-infix fun Double2DArrayAssert.contains(value: Pair<DoubleArray?, Int>): Double2DArrayAssert = contains(value.first, Index.atIndex(value.second))
-
 infix fun Double2DArrayAssert.contains(value: Pair<DoubleArray?, Index>): Double2DArrayAssert = contains(value.first, value.second)
-
-infix fun Double2DArrayAssert.doesNotContain(value: Pair<DoubleArray?, Int>): Double2DArrayAssert = doesNotContain(value.first, Index.atIndex(value.second))
 
 infix fun Double2DArrayAssert.doesNotContain(value: Pair<DoubleArray?, Index>): Double2DArrayAssert = doesNotContain(value.first, value.second)

@@ -11,10 +11,6 @@ infix fun Byte2DArrayAssert.hasDimensions(value: Pair<Int, Int>): Byte2DArrayAss
 
 infix fun Byte2DArrayAssert.hasNumberOfRows(expected: Int): Byte2DArrayAssert = hasNumberOfRows(expected)
 
-infix fun Byte2DArrayAssert.contains(value: Pair<ByteArray?, Int>): Byte2DArrayAssert = contains(value.first, Index.atIndex(value.second))
-
 infix fun Byte2DArrayAssert.contains(value: Pair<ByteArray?, Index>): Byte2DArrayAssert = contains(value.first, value.second)
-
-infix fun Byte2DArrayAssert.doesNotContain(value: Pair<ByteArray?, Int>): Byte2DArrayAssert = doesNotContain(value.first, Index.atIndex(value.second))
 
 infix fun Byte2DArrayAssert.doesNotContain(value: Pair<ByteArray?, Index>): Byte2DArrayAssert = doesNotContain(value.first, value.second)

@@ -32,17 +32,11 @@ infix fun CharArrayAssert.containsSequence(values: Array<Char>): CharArrayAssert
 infix fun CharArrayAssert.containsSubsequence(values: Array<Char>): CharArrayAssert =
     containsSubsequence(values)
 
-infix fun CharArrayAssert.contains(pair: Pair<Char, Int>): CharArrayAssert =
-    contains(pair.first, Index.atIndex(pair.second))
-
 infix fun CharArrayAssert.contains(pair: Pair<Char, Index>): CharArrayAssert =
     contains(pair.first, pair.second)
 
 infix fun CharArrayAssert.doesNotContain(values: Array<Char>): CharArrayAssert =
     doesNotContain(values)
-
-infix fun CharArrayAssert.doesNotContain(pair: Pair<Char, Int>): CharArrayAssert =
-    doesNotContain(pair.first, Index.atIndex(pair.second))
 
 infix fun CharArrayAssert.doesNotContain(pair: Pair<Char, Index>): CharArrayAssert =
     doesNotContain(pair.first, pair.second)

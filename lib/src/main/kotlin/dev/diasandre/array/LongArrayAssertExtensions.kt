@@ -32,17 +32,11 @@ infix fun LongArrayAssert.containsSequence(values: Array<Long>): LongArrayAssert
 infix fun LongArrayAssert.containsSubsequence(values: Array<Long>): LongArrayAssert =
     containsSubsequence(values)
 
-infix fun LongArrayAssert.contains(pair: Pair<Long, Int>): LongArrayAssert =
-    contains(pair.first, Index.atIndex(pair.second))
-
 infix fun LongArrayAssert.contains(pair: Pair<Long, Index>): LongArrayAssert =
     contains(pair.first, pair.second)
 
 infix fun LongArrayAssert.doesNotContain(values: Array<Long>): LongArrayAssert =
     doesNotContain(values)
-
-infix fun LongArrayAssert.doesNotContain(pair: Pair<Long, Int>): LongArrayAssert =
-    doesNotContain(pair.first, Index.atIndex(pair.second))
 
 infix fun LongArrayAssert.doesNotContain(pair: Pair<Long, Index>): LongArrayAssert =
     doesNotContain(pair.first, pair.second)

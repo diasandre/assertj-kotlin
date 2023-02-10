@@ -32,11 +32,13 @@ infix fun AbstractIntegerAssert<*>.isNotCloseTo(block: () -> Pair<Int, Offset<In
     return isNotCloseTo(expected, offset)
 }
 
+@JvmName("isCloseToPercentage")
 infix fun AbstractIntegerAssert<*>.isCloseTo(block: () -> Pair<Int, Percentage>): AbstractIntegerAssert<*> {
     val (expected, offset) = block()
     return isCloseTo(expected, offset)
 }
 
+@JvmName("isNotCloseToPercentage")
 infix fun AbstractIntegerAssert<*>.isNotCloseTo(block: () -> Pair<Int, Percentage>): AbstractIntegerAssert<*> {
     val (expected, offset) = block()
     return isNotCloseTo(expected, offset)

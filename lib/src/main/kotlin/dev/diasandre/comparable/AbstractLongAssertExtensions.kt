@@ -30,11 +30,13 @@ infix fun AbstractLongAssert<*>.isNotCloseTo(block: () -> Pair<Long, Offset<Long
     return isNotCloseTo(expected, offset)
 }
 
+@JvmName("isCloseToPercentage")
 infix fun AbstractLongAssert<*>.isCloseTo(block: () -> Pair<Long, Percentage>): AbstractLongAssert<*> {
     val (expected, offset) = block()
     return isCloseTo(expected, offset)
 }
 
+@JvmName("isNotCloseToPercentage")
 infix fun AbstractLongAssert<*>.isNotCloseTo(block: () -> Pair<Long, Percentage>): AbstractLongAssert<*> {
     val (expected, offset) = block()
     return isNotCloseTo(expected, offset)

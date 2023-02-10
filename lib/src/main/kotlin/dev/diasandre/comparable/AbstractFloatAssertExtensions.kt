@@ -21,12 +21,14 @@ infix fun AbstractFloatAssert<*>.isNotClose(block: () -> Pair<Float, Offset<Floa
     return isNotCloseTo(expected, offset)
 }
 
+@JvmName("isCloseToPercentage")
 infix fun AbstractFloatAssert<*>.isCloseTo(block: () -> Pair<Float, Percentage>): AbstractFloatAssert<*> {
     val (expected: Float, offset: Percentage) = block()
     return isCloseTo(expected, offset)
 }
 
-infix fun AbstractFloatAssert<*>.isNotClose(block: () -> Pair<Float, Percentage>): AbstractFloatAssert<*> {
+@JvmName("isNotCloseToPercentage")
+infix fun AbstractFloatAssert<*>.isNotCloseTo(block: () -> Pair<Float, Percentage>): AbstractFloatAssert<*> {
     val (expected: Float, offset: Percentage) = block()
     return isNotCloseTo(expected, offset)
 }

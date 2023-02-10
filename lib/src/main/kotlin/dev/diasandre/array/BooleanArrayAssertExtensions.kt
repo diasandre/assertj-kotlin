@@ -30,22 +30,12 @@ infix fun BooleanArrayAssert.containsSequence(values: Array<Boolean>): BooleanAr
 
 infix fun BooleanArrayAssert.containsSubsequence(values: Array<Boolean>): BooleanArrayAssert = containsSubsequence(values)
 
-infix fun BooleanArrayAssert.contains(block: () -> Pair<Boolean, Int>): BooleanArrayAssert {
-    val (value, index) = block()
-    return contains(value, Index.atIndex(index))
-}
-
 infix fun BooleanArrayAssert.contains(block: () -> Pair<Boolean, Index>): BooleanArrayAssert {
     val (value, index) = block()
     return contains(value, index)
 }
 
 infix fun BooleanArrayAssert.doesNotContain(values: Array<Boolean>): BooleanArrayAssert = doesNotContain(values)
-
-infix fun BooleanArrayAssert.doesNotContain(block: () -> Pair<Boolean, Int>): BooleanArrayAssert {
-    val (value, index) = block()
-    return doesNotContain(value, Index.atIndex(index))
-}
 
 infix fun BooleanArrayAssert.doesNotContain(block: () -> Pair<Boolean, Index>): BooleanArrayAssert {
     val (value, index) = block()

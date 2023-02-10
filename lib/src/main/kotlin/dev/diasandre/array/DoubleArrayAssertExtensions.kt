@@ -32,17 +32,11 @@ infix fun DoubleArrayAssert.containsSequence(values: Array<Double>): DoubleArray
 infix fun DoubleArrayAssert.containsSubsequence(values: Array<Double>): DoubleArrayAssert =
     containsSubsequence(values)
 
-infix fun DoubleArrayAssert.contains(pair: Pair<Double, Int>): DoubleArrayAssert =
-    contains(pair.first, Index.atIndex(pair.second))
-
 infix fun DoubleArrayAssert.contains(pair: Pair<Double, Index>): DoubleArrayAssert =
     contains(pair.first, pair.second)
 
 infix fun DoubleArrayAssert.doesNotContain(values: Array<Double>): DoubleArrayAssert =
     doesNotContain(values)
-
-infix fun DoubleArrayAssert.doesNotContain(pair: Pair<Double, Int>): DoubleArrayAssert =
-    doesNotContain(pair.first, Index.atIndex(pair.second))
 
 infix fun DoubleArrayAssert.doesNotContain(pair: Pair<Double, Index>): DoubleArrayAssert =
     doesNotContain(pair.first, pair.second)

@@ -32,17 +32,11 @@ infix fun ByteArrayAssert.containsSequence(values: Array<Byte>): ByteArrayAssert
 infix fun ByteArrayAssert.containsSubsequence(values: Array<Byte>): ByteArrayAssert =
     containsSubsequence(values)
 
-infix fun ByteArrayAssert.contains(pair: Pair<Byte, Int>): ByteArrayAssert =
-    contains(pair.first, Index.atIndex(pair.second))
-
 infix fun ByteArrayAssert.contains(pair: Pair<Byte, Index>): ByteArrayAssert =
     contains(pair.first, pair.second)
 
 infix fun ByteArrayAssert.doesNotContain(values: Array<Byte>): ByteArrayAssert =
     doesNotContain(values)
-
-infix fun ByteArrayAssert.doesNotContain(pair: Pair<Byte, Int>): ByteArrayAssert =
-    doesNotContain(pair.first, Index.atIndex(pair.second))
 
 infix fun ByteArrayAssert.doesNotContain(pair: Pair<Byte, Index>): ByteArrayAssert =
     doesNotContain(pair.first, pair.second)

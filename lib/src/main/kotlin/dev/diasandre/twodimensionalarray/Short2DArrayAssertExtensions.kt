@@ -11,10 +11,6 @@ infix fun Short2DArrayAssert.hasDimensions(value: Pair<Int, Int>): Short2DArrayA
 
 infix fun Short2DArrayAssert.hasNumberOfRows(expected: Int): Short2DArrayAssert = hasNumberOfRows(expected)
 
-infix fun Short2DArrayAssert.contains(value: Pair<ShortArray?, Int>): Short2DArrayAssert = contains(value.first, Index.atIndex(value.second))
-
 infix fun Short2DArrayAssert.contains(value: Pair<ShortArray?, Index>): Short2DArrayAssert = contains(value.first, value.second)
-
-infix fun Short2DArrayAssert.doesNotContain(value: Pair<ShortArray?, Int>): Short2DArrayAssert = doesNotContain(value.first, Index.atIndex(value.second))
 
 infix fun Short2DArrayAssert.doesNotContain(value: Pair<ShortArray?, Index>): Short2DArrayAssert = doesNotContain(value.first, value.second)

@@ -11,10 +11,6 @@ infix fun Float2DArrayAssert.hasDimensions(value: Pair<Int, Int>): Float2DArrayA
 
 infix fun Float2DArrayAssert.hasNumberOfRows(expected: Int): Float2DArrayAssert = hasNumberOfRows(expected)
 
-infix fun Float2DArrayAssert.contains(value: Pair<FloatArray?, Int>): Float2DArrayAssert = contains(value.first, Index.atIndex(value.second))
-
 infix fun Float2DArrayAssert.contains(value: Pair<FloatArray?, Index>): Float2DArrayAssert = contains(value.first, value.second)
-
-infix fun Float2DArrayAssert.doesNotContain(value: Pair<FloatArray?, Int>): Float2DArrayAssert = doesNotContain(value.first, Index.atIndex(value.second))
 
 infix fun Float2DArrayAssert.doesNotContain(value: Pair<FloatArray?, Index>): Float2DArrayAssert = doesNotContain(value.first, value.second)
