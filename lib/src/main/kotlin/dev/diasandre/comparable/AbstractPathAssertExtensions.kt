@@ -46,26 +46,26 @@ infix fun AbstractPathAssert<*>.endsWithRaw(other: Path): AbstractPathAssert<*> 
 
 @JvmName("hasDigestMessageDigestByteArray")
 infix fun AbstractPathAssert<*>.hasDigest(block: () -> Pair<MessageDigest, ByteArray>): AbstractPathAssert<*> {
-    val (path, charset) = block()
-    return hasDigest(path, charset)
+    val (messageDigest, expected) = block()
+    return hasDigest(messageDigest, expected)
 }
 
 @JvmName("hasDigestMessageDigestString")
 infix fun AbstractPathAssert<*>.hasDigest(block: () -> Pair<MessageDigest, String>): AbstractPathAssert<*> {
-    val (path, charset) = block()
-    return hasDigest(path, charset)
+    val (messageDigest, expected) = block()
+    return hasDigest(messageDigest, expected)
 }
 
 @JvmName("hasDigestStringByteArray")
 infix fun AbstractPathAssert<*>.hasDigest(block: () -> Pair<String, ByteArray>): AbstractPathAssert<*> {
-    val (path, charset) = block()
-    return hasDigest(path, charset)
+    val (algorithm, expected) = block()
+    return hasDigest(algorithm, expected)
 }
 
 @JvmName("hasDigestStringString")
 infix fun AbstractPathAssert<*>.hasDigest(block: () -> Pair<String, String>): AbstractPathAssert<*> {
-    val (path, charset) = block()
-    return hasDigest(path, charset)
+    val (algorithm, expected) = block()
+    return hasDigest(algorithm, expected)
 }
 
 infix fun AbstractPathAssert<*>.isDirectoryContaining(filter: Predicate<Path>): AbstractPathAssert<*> = isDirectoryContaining(filter)
