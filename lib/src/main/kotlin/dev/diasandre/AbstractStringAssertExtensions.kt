@@ -15,7 +15,3 @@ infix fun AbstractStringAssert<*>.isGreaterThan(other: String): AbstractStringAs
 infix fun AbstractStringAssert<*>.isLessThanOrEqualTo(other: String): AbstractStringAssert<*> = isLessThanOrEqualTo(other)
 
 infix fun AbstractStringAssert<*>.isLessThan(other: String): AbstractStringAssert<*> = isLessThan(other)
-
-fun main() {
-    println("a")
-}
