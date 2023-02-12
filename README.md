@@ -20,7 +20,7 @@ Here is an example of using the assertThat function to write an assertion:
 
 ```
 val actual = "hello"
-assertThat { actual } isEqualTo "hello"
+assertThat(actual) isEqualTo "hello"
 ```
 
 ## Contribution

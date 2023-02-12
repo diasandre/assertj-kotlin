@@ -2,7 +2,7 @@ package dev.diasandre
 
 import org.assertj.core.api.AbstractStringAssert
 
-infix fun AbstractStringAssert<*>.isEqualTo(expected: String): AbstractStringAssert<*> = isEqualTo(expected)
+infix fun AbstractStringAssert<*>.isEqualTo(expected: String?): AbstractStringAssert<*> = isEqualTo(expected)
 
 infix fun AbstractStringAssert<*>.isStrictlyBetween(value: Pair<String, String>): AbstractStringAssert<*> = isStrictlyBetween(value.first, value.second)
 

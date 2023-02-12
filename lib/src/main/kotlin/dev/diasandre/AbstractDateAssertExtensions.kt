@@ -65,41 +65,41 @@ infix fun AbstractDateAssert<*>.isAfterOrEqualTo(other: Instant): AbstractDateAs
 
 infix fun AbstractDateAssert<*>.isAfterOrEqualTo(dateAsString: String): AbstractDateAssert<*> = isAfterOrEqualTo(dateAsString)
 
-@JvmName("abstractDateIsBetweenDate")
-infix fun AbstractDateAssert<*>.isBetween(block: () -> Pair<Date, Date>): AbstractDateAssert<*> {
-    val (start, end) = block()
-    return isBetween(start, end)
-}
-
-@JvmName("abstractDateIsBetweenString")
-infix fun AbstractDateAssert<*>.isBetween(block: () -> Pair<String, String>): AbstractDateAssert<*> {
-    val (start, end) = block()
-    return isBetween(start, end)
-}
-
-@JvmName("abstractDateIsBetweenInstant")
-infix fun AbstractDateAssert<*>.isBetween(block: () -> Pair<Instant, Instant>): AbstractDateAssert<*> {
-    val (start, end) = block()
-    return isBetween(start, end)
-}
-
-@JvmName("abstractDateIsNotBetweenDate")
-infix fun AbstractDateAssert<*>.isNotBetween(block: () -> Pair<Date, Date>): AbstractDateAssert<*> {
-    val (start, end) = block()
-    return isNotBetween(start, end)
-}
-
-@JvmName("abstractDateIsNotBetweenString")
-infix fun AbstractDateAssert<*>.isNotBetween(block: () -> Pair<String, String>): AbstractDateAssert<*> {
-    val (start, end) = block()
-    return isNotBetween(start, end)
-}
-
-@JvmName("abstractDateIsNotBetweenInstant")
-infix fun AbstractDateAssert<*>.isNotBetween(block: () -> Pair<Instant, Instant>): AbstractDateAssert<*> {
-    val (start, end) = block()
-    return isNotBetween(start, end)
-}
+// @JvmName("abstractDateIsBetweenDate")
+// infix fun AbstractDateAssert<*>.isBetween(block: () -> Pair<Date, Date>): AbstractDateAssert<*> {
+//    val (start, end) = block()
+//    return isBetween(start, end)
+// }
+//
+// @JvmName("abstractDateIsBetweenString")
+// infix fun AbstractDateAssert<*>.isBetween(block: () -> Pair<String, String>): AbstractDateAssert<*> {
+//    val (start, end) = block()
+//    return isBetween(start, end)
+// }
+//
+// @JvmName("abstractDateIsBetweenInstant")
+// infix fun AbstractDateAssert<*>.isBetween(block: () -> Pair<Instant, Instant>): AbstractDateAssert<*> {
+//    val (start, end) = block()
+//    return isBetween(start, end)
+// }
+//
+// @JvmName("abstractDateIsNotBetweenDate")
+// infix fun AbstractDateAssert<*>.isNotBetween(block: () -> Pair<Date, Date>): AbstractDateAssert<*> {
+//    val (start, end) = block()
+//    return isNotBetween(start, end)
+// }
+//
+// @JvmName("abstractDateIsNotBetweenString")
+// infix fun AbstractDateAssert<*>.isNotBetween(block: () -> Pair<String, String>): AbstractDateAssert<*> {
+//    val (start, end) = block()
+//    return isNotBetween(start, end)
+// }
+//
+// @JvmName("abstractDateIsNotBetweenInstant")
+// infix fun AbstractDateAssert<*>.isNotBetween(block: () -> Pair<Instant, Instant>): AbstractDateAssert<*> {
+//    val (start, end) = block()
+//    return isNotBetween(start, end)
+// }
 
 infix fun AbstractDateAssert<*>.isBeforeYear(year: Int): AbstractDateAssert<*> = isBeforeYear(year)
 
@@ -169,23 +169,29 @@ infix fun AbstractDateAssert<*>.isInSameSecondAs(other: Date): AbstractDateAsser
 
 infix fun AbstractDateAssert<*>.isInSameSecondAs(dateAsString: String): AbstractDateAssert<*> = isInSameSecondAs(dateAsString)
 
-@JvmName("abstractDateIsCloseToDate")
-infix fun AbstractDateAssert<*>.isCloseTo(block: () -> Pair<Date, Long>): AbstractDateAssert<*> {
-    val (other, deltaInMilliseconds) = block()
-    return isCloseTo(other, deltaInMilliseconds)
-}
-
-@JvmName("abstractDateIsCloseToInstant")
-infix fun AbstractDateAssert<*>.isCloseTo(block: () -> Pair<Instant, Long>): AbstractDateAssert<*> {
-    val (other, deltaInMilliseconds) = block()
-    return isCloseTo(other, deltaInMilliseconds)
-}
-
-@JvmName("abstractDateIsCloseToString")
-infix fun AbstractDateAssert<*>.isCloseTo(block: () -> Pair<String, Long>): AbstractDateAssert<*> {
-    val (other, deltaInMilliseconds) = block()
-    return isCloseTo(other, deltaInMilliseconds)
-}
+// @JvmName("abstractDateIsCloseToDate")
+// infix fun AbstractDateAssert<*>.isCloseTo(block: () -> Pair<Date, Long>): AbstractDateAssert<*> {
+//    val (other, deltaInMilliseconds) = block()
+//    return isCloseTo(other, deltaInMilliseconds)
+// }
+//
+// @JvmName("abstractDateIsCloseToInstant")
+// infix fun AbstractDateAssert<*>.isCloseTo(block: () -> Pair<Instant, Long>): AbstractDateAssert<*> {
+//    val (other, deltaInMilliseconds) = block()
+//    return isCloseTo(other, deltaInMilliseconds)
+// }
+//
+// @JvmName("abstractDateIsCloseToString")
+// infix fun AbstractDateAssert<*>.isCloseTo(block: () -> Pair<String, Long>): AbstractDateAssert<*> {
+//    val (other, deltaInMilliseconds) = block()
+//    return isCloseTo(other, deltaInMilliseconds)
+// }
+//
+// fun main() {
+//    assertThat(Date()) isCloseTo {
+//        ("" to 1L) as Pair<String, Long>
+//    }
+// }
 
 infix fun AbstractDateAssert<*>.hasTime(timestamp: Long): AbstractDateAssert<*> = hasTime(timestamp)
 

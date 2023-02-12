@@ -4,9 +4,9 @@ import org.assertj.core.api.AbstractByteAssert
 import org.assertj.core.data.Offset
 import org.assertj.core.data.Percentage
 
-infix fun AbstractByteAssert<*>.isEqualTo(expected: Byte): AbstractByteAssert<*> = isEqualTo(expected)
+infix fun AbstractByteAssert<*>.isEqualTo(expected: Byte?): AbstractByteAssert<*> = isEqualTo(expected)
 
-infix fun AbstractByteAssert<*>.isNotEqualTo(other: Byte): AbstractByteAssert<*> = isNotEqualTo(other)
+infix fun AbstractByteAssert<*>.isNotEqualTo(other: Byte?): AbstractByteAssert<*> = isNotEqualTo(other)
 
 infix fun AbstractByteAssert<*>.isLessThan(other: Byte): AbstractByteAssert<*> = isLessThan(other)
 

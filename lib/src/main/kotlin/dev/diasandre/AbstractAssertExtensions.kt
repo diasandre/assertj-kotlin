@@ -13,9 +13,9 @@ infix fun <T> AbstractAssert<*, T>.describedAs(description: Description): Abstra
 
 infix fun <T> AbstractAssert<*, T>.doesNotHave(condition: Condition<T>): AbstractAssert<*, T> = doesNotHave(condition) as AbstractAssert<*, T>
 
-infix fun <T> AbstractAssert<*, T>.isEqualTo(expected: Any): AbstractAssert<*, T> = isEqualTo(expected) as AbstractAssert<*, T>
+infix fun <T> AbstractAssert<*, T>.isEqualTo(expected: Any?): AbstractAssert<*, T> = isEqualTo(expected) as AbstractAssert<*, T>
 
-infix fun <T> AbstractAssert<*, T>.isNotEqualTo(expected: Any): AbstractAssert<*, T> = isNotEqualTo(expected) as AbstractAssert<*, T>
+infix fun <T> AbstractAssert<*, T>.isNotEqualTo(expected: Any?): AbstractAssert<*, T> = isNotEqualTo(expected) as AbstractAssert<*, T>
 
 infix fun <T> AbstractAssert<*, T>.isSameAs(expected: Any): AbstractAssert<*, T> = isSameAs(expected) as AbstractAssert<*, T>
 
