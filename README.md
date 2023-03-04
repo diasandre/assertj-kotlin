@@ -1,7 +1,8 @@
 # assertj-kotlin
-
-## ⚠️ WORKING IN PROGRESS ⚠️
 This is a Kotlin wrapper for AssertJ, a fluent and easy-to-use Java library for writing assertions. It provides a more natural and readable way of writing assertions in Kotlin, taking advantage of Kotlin's language features such as extension/infix functions and type inference.
+
+## Disclaimer
+Varargs, majority of function with 2 or more parameters are not included
 
 ## Installation
 To use the Kotlin wrapper for AssertJ in your project, add the following dependency to your build.gradle file:
